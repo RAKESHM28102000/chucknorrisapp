@@ -22,9 +22,11 @@ function JokesAll( {setSelectedCategory,setOpen}) {
   return (
     <div>
        <div className='header bounce-title flexcenter'><h1>Chuck Norris</h1></div> 
-       <div className='bodyContent flexcenter'>
+       <div className='flexcenter'>
+       <div className='bodyContent griddisplay'>
        { jokes.map((joke,index)=><JokeCard  key={index} joke={joke} setOpen={setOpen} setSelectedCategory={setSelectedCategory}/>)  }
 
+       </div>
        </div>
     </div>
   )

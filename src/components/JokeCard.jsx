@@ -1,5 +1,15 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { styled } from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  @media (max-width: 1028px) {
+   display:none;
+  }
+`;
 
 function JokeCard({joke,index,setSelectedCategory,setOpen}) {
   
@@ -18,7 +28,7 @@ function JokeCard({joke,index,setSelectedCategory,setOpen}) {
             onClick={handleSelect}
           >
         <h2>{`${joke.charAt(0).toUpperCase()+joke.slice(1,joke.length)}`}</h2> 
-        <p>Unlimited jokes on {joke}</p>
+        <Container><p>Unlimited jokes on {joke}</p></Container>
     </motion.div>
     
   )

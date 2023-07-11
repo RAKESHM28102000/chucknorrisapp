@@ -25,7 +25,8 @@ const Jokebox = ({setOpen,category}) => {
       };
     
       return (
-        <div className='card jokebox'>
+        <div className='flexcenter'>
+        <div className='card jokebox '>
           <div className='cancel flexcenter' onClick={()=>setOpen(false)}><VscChromeClose className='icon'/></div>
            <h2>{`${category.charAt(0).toUpperCase()+category.slice(1,category.length)}`} </h2>
            <div className='flexcenter'><p>{`"${joke}"`}</p> </div>      
@@ -34,6 +35,7 @@ const Jokebox = ({setOpen,category}) => {
               onClick={handleClick}>
              Next joke
            </button>
+        </div>
         </div>
       );
     };
